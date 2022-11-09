@@ -20,7 +20,27 @@ function addTask() {
     editBtn.classList = "editBtn";
     editBtn.addEventListener("click", editValue);
 
-        function editValue() {
+        
+    //delete
+    let delBtn = document.createElement("button");
+    delBtn.type = "submit";
+    alert("Task submitted.")
+    delBtn.innerHTML = "<i class='fa-solid fa-xmark icon'></i>"; 
+    delBtn.addEventListener("click", delTask);
+    
+    //append
+    newTodos.appendChild(taskItem);
+    taskItem.appendChild(taskInput);
+    taskItem.appendChild(editBtn);
+    taskItem.appendChild(delBtn);
+    
+    let count = newTodos.childElementCount;
+    if (count == 5) {
+        addBtn.setAttribute("disabled", "");
+        alert("You have reached the limit.");
+    }
+    
+    function editValue() {
             taskInput.removeAttribute("disabled", "");
 
             let saveBtn = document.createElement("button");
@@ -32,26 +52,16 @@ function addTask() {
 
                 function saveValue() {
                     let sValue = taskInput.value;
-                    console.log(sValue);
+                    alert("Changes saved!");
                     taskItem.setAttribute("disabled", "");
 
                     saveBtn.remove();
                 }
         }
 
-    //delete
-    let delBtn = document.createElement("button");
-    delBtn.type = "submit";
-    delBtn.innerHTML = "<i class='fa-solid fa-xmark icon'></i>"; 
-    delBtn.addEventListener("click", delTask);
-    
-        function delTask() {
-        taskItem.remove()
-    }
-
-    newTodos.appendChild(taskItem);
-    taskItem.appendChild(taskInput);
-    taskItem.appendChild(editBtn);
-    taskItem.appendChild(delBtn);
+    function delTask() {
+            taskItem.remove();
+            alert("Task deleted.")
+            addBtn.removeAttribute("disabled", "");
 }
-
+}

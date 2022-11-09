@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: aliceblue;
+    background-image: url(../img/bg.png);
     height: 100vh;
     width: 100vw;
     display: flex;

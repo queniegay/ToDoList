@@ -24,7 +24,7 @@ function addTask() {
     //delete
     let delBtn = document.createElement("button");
     delBtn.type = "submit";
-    alert("Task submitted.")
+    alert("Task added.")
     delBtn.innerHTML = "<i class='fa-solid fa-xmark icon'></i>"; 
     delBtn.addEventListener("click", delTask);
     
@@ -65,3 +65,5 @@ function addTask() {
             addBtn.removeAttribute("disabled", "");
 }
 }
+
+document.getElementById("dateToday").innerHTML = Date();

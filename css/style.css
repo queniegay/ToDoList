@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -22,6 +23,13 @@ h1 {
     color: rgb(5, 131, 180);
     letter-spacing: 1px;
     margin: 5px 30px;
+}
+.date {
+    color: rgb(0, 65, 95);
+    margin-bottom: 15px;
+    padding: 5px;
+    font-family: 'Stardos Stencil', cursive;
+    
 }
 .todoList {
     width: 500px;
@@ -48,6 +56,9 @@ h1 {
     padding: 5px;
     width: 350px;
     border: none;
+}
+taskInput {
+    padding: 10px;
 }
 .icon {
     color: rgb(6, 123, 177);
